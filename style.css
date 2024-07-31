@@ -1,0 +1,128 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom properties */
+:root {
+  --primary-dark-blue: hsl(233, 47%, 7%);
+  --primary-Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --primary-Soft-violet: hsl(277, 64%, 61%);
+
+  --Neutral-white: hsl(0, 0%, 100%);
+  --Neutral-white-500: hsla(0, 0%, 100%, 0.75);
+  --Neutral-white-700: hsla(0, 0%, 100%, 0.6);
+
+  --font-famil-Inter: "Inter", sans-serif;
+  --font-famil-Lexend-Deca: "Lexend Deca", sans-serif;
+}
+
+/* base style */
+
+body {
+  font-family: var(--font-famil-Inter);
+  color: var(--Neutral-white);
+  background-color: var(--primary-dark-blue);
+  height: 100vh;
+  padding: 90px 60px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content {
+  padding: 90px 80px;
+  background-color: var(--primary-Dark-desaturated-blue);
+}
+.heading {
+  max-width: 410px;
+  line-height: 1.3;
+}
+.insight {
+  color: var(--primary-Soft-violet);
+}
+
+.paragraph {
+  max-width: 335px;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.4;
+  text-align: start;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  max-width: 330px;
+  margin-top: 100px;
+}
+.stat-heading {
+  margin-bottom: 5px;
+}
+.stat-paragraph {
+  text-transform: uppercase;
+  font-family: var(--font-famil-Lexend-Deca);
+  font-size: 14px;
+  opacity: 0.7;
+}
+.image {
+  width: 50%;
+  height: 100%;
+  background: url(/images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+  background-color: var(--primary-Soft-violet);
+  background-blend-mode: multiply;
+  /* background-blend-mode: |||||lighten||||; */
+}
+@media (max-width: 500px) {
+  body {
+    height: inherit;
+    padding: 90px 10px;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+  .image {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+  }
+  .content {
+    padding: 40px 30px;
+    max-width: 500px;
+  }
+  .text-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heading {
+    max-width: 490px;
+    text-align: center;
+    font-size: 28px;
+  }
+  .paragraph {
+    text-align: center;
+    max-width: 240px;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    margin-top: 35px;
+  }
+  .stat {
+  }
+}
