@@ -75,13 +75,13 @@ body {
 .image {
   width: 50%;
   height: 100%;
-  background: url(/images/image-header-desktop.jpg);
+  background: url(images/image-header-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 10px 10px 0;
   background-color: var(--primary-Soft-violet);
   background-blend-mode: multiply;
-  /* background-blend-mode: |||||lighten||||; */
+ 
 }
 @media (max-width: 500px) {
   body {
